@@ -10,11 +10,11 @@ export const HomePage = () => {
       <section className="bg-primary text-primary-foreground py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Welcome to FusionFest
+            LNCT Group of Colleges
           </h1>
           <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-            Your one-stop platform for managing and participating in college events, 
-            contests, and club activities
+            Official event portal for LNCT Bhopal - Manage and participate in college events, 
+            contests, and club activities across campus
           </p>
           <div className="flex gap-4 justify-center">
             <Button asChild size="lg" variant="secondary">
@@ -69,7 +69,7 @@ export const HomePage = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Join FusionFest today and never miss an event again
+            Join LNCT Events today and never miss a campus event again
           </p>
           <Button asChild size="lg">
             <Link to="/register">Create Account</Link>

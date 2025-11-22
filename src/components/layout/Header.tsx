@@ -39,10 +39,10 @@ export const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded bg-primary text-primary-foreground font-bold">
-              FF
+            <div className="flex h-8 w-8 items-center justify-center rounded bg-primary text-primary-foreground font-bold text-sm">
+              LNCT
             </div>
-            <span className="text-xl font-bold text-foreground">FusionFest</span>
+            <span className="text-xl font-bold text-foreground">LNCT Events</span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-6">
