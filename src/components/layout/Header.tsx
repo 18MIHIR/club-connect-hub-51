@@ -49,6 +49,9 @@ export const Header = () => {
             <Link to="/events" className="text-sm font-medium text-foreground hover:text-primary">
               Events
             </Link>
+            <Link to="/clubs" className="text-sm font-medium text-foreground hover:text-primary">
+              Clubs
+            </Link>
             {isAuthenticated && (
               <Link to={getDashboardRoute()} className="text-sm font-medium text-foreground hover:text-primary">
                 Dashboard

@@ -10,6 +10,7 @@ import { HomePage } from "@/pages/HomePage";
 import { LoginPage } from "@/pages/LoginPage";
 import { RegisterPage } from "@/pages/RegisterPage";
 import { EventsPage } from "@/pages/EventsPage";
+import { ClubsPage } from "@/pages/ClubsPage";
 import { StudentDashboard } from "@/pages/StudentDashboard";
 import { OrganizerDashboard } from "@/pages/OrganizerDashboard";
 import { AdminDashboard } from "@/pages/AdminDashboard";
@@ -31,6 +32,7 @@ const App = () => (
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/events" element={<EventsPage />} />
+            <Route path="/clubs" element={<ClubsPage />} />
             
             {/* Student Routes */}
             <Route
