@@ -69,26 +69,43 @@ export const OrganizerDashboard = () => {
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
-              <div className="flex items-center justify-between p-4 border rounded-lg">
-                <div>
-                  <h3 className="font-semibold">Tech Symposium 2024</h3>
-                  <p className="text-sm text-muted-foreground">Feb 15, 2024 • 45/100 registered</p>
-                  <span className="inline-block mt-1 text-xs bg-success/10 text-success px-2 py-1 rounded">Published</span>
+              <div className="border rounded-lg p-4">
+                <div className="flex items-center justify-between mb-3">
+                  <div>
+                    <h3 className="font-semibold">LNCT Carnival 2025</h3>
+                    <p className="text-sm text-muted-foreground">Dec 10, 2025 • 45/100 registered</p>
+                    <span className="inline-block mt-1 text-xs bg-success/10 text-success px-2 py-1 rounded">Published</span>
+                  </div>
+                  <div className="flex gap-2">
+                    <Button variant="outline" size="sm">Edit</Button>
+                    <Button variant="outline" size="sm">View Details</Button>
+                  </div>
                 </div>
-                <div className="flex gap-2">
-                  <Button variant="outline" size="sm">Edit</Button>
-                  <Button variant="outline" size="sm">View</Button>
+                <div className="mt-3 pt-3 border-t">
+                  <p className="text-sm font-medium mb-2">Registered Students (Sample):</p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="text-xs bg-secondary px-2 py-1 rounded">Arjun Sharma</span>
+                    <span className="text-xs bg-secondary px-2 py-1 rounded">Priya Gupta</span>
+                    <span className="text-xs bg-secondary px-2 py-1 rounded">Rahul Verma</span>
+                    <span className="text-xs bg-secondary px-2 py-1 rounded">Anita Singh</span>
+                    <span className="text-xs bg-secondary px-2 py-1 rounded">Vikram Patel</span>
+                  </div>
                 </div>
               </div>
-              <div className="flex items-center justify-between p-4 border rounded-lg">
-                <div>
-                  <h3 className="font-semibold">Hackathon Spring 2024</h3>
-                  <p className="text-sm text-muted-foreground">Mar 10, 2024 • 0/50 registered</p>
-                  <span className="inline-block mt-1 text-xs bg-warning/10 text-warning px-2 py-1 rounded">Pending Approval</span>
+              <div className="border rounded-lg p-4">
+                <div className="flex items-center justify-between mb-3">
+                  <div>
+                    <h3 className="font-semibold">CodeFiesta LNCT</h3>
+                    <p className="text-sm text-muted-foreground">Dec 15, 2025 • 0/50 registered</p>
+                    <span className="inline-block mt-1 text-xs bg-warning/10 text-warning px-2 py-1 rounded">Pending Approval</span>
+                  </div>
+                  <div className="flex gap-2">
+                    <Button variant="outline" size="sm">Edit</Button>
+                    <Button variant="outline" size="sm">View Details</Button>
+                  </div>
                 </div>
-                <div className="flex gap-2">
-                  <Button variant="outline" size="sm">Edit</Button>
-                  <Button variant="outline" size="sm">View</Button>
+                <div className="mt-3 pt-3 border-t">
+                  <p className="text-sm text-muted-foreground">No registrations yet</p>
                 </div>
               </div>
             </div>

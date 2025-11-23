@@ -46,30 +46,51 @@ export const FacultyDashboard = () => {
         <Card className="mb-8">
           <CardHeader>
             <CardTitle>Events Pending Review</CardTitle>
-            <CardDescription>Academic events requiring faculty approval</CardDescription>
+            <CardDescription>Events requiring faculty approval</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
-              <div className="flex items-center justify-between p-4 border rounded-lg">
-                <div>
-                  <h3 className="font-semibold">National Seminar on AI</h3>
-                  <p className="text-sm text-muted-foreground">Dept. of Computer Science • Mar 25, 2024</p>
+              <div className="border rounded-lg p-4">
+                <div className="flex items-center justify-between mb-3">
+                  <div>
+                    <h3 className="font-semibold">CodeFiesta LNCT</h3>
+                    <p className="text-sm text-muted-foreground">Dec 15, 2025 • E-cell LNCTS</p>
+                    <p className="text-xs text-muted-foreground mt-1">Venue: LNCTS S21 Seminar Hall</p>
+                  </div>
+                  <div className="flex gap-2">
+                    <Button variant="outline" size="sm" className="text-destructive">Reject</Button>
+                    <Button size="sm">Approve</Button>
+                  </div>
                 </div>
-                <div className="flex gap-2">
-                  <Button size="sm" variant="outline">View Details</Button>
-                  <Button size="sm" variant="outline" className="text-destructive">Reject</Button>
-                  <Button size="sm">Approve</Button>
+                <div className="mt-3 pt-3 border-t">
+                  <p className="text-sm font-medium mb-2">Expected Participants:</p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="text-xs bg-secondary px-2 py-1 rounded">Karan Joshi</span>
+                    <span className="text-xs bg-secondary px-2 py-1 rounded">Neha Mishra</span>
+                    <span className="text-xs bg-secondary px-2 py-1 rounded">Amit Dubey</span>
+                    <span className="text-xs bg-secondary px-2 py-1 rounded">Sanjay Tiwari</span>
+                  </div>
                 </div>
               </div>
-              <div className="flex items-center justify-between p-4 border rounded-lg">
-                <div>
-                  <h3 className="font-semibold">Project Expo 2024</h3>
-                  <p className="text-sm text-muted-foreground">Engineering Dept. • Apr 15, 2024</p>
+              <div className="border rounded-lg p-4">
+                <div className="flex items-center justify-between mb-3">
+                  <div>
+                    <h3 className="font-semibold">LNCT Debate Championship</h3>
+                    <p className="text-sm text-muted-foreground">Dec 20, 2025 • Orators Club</p>
+                    <p className="text-xs text-muted-foreground mt-1">Venue: Aryabhatt Auditorium</p>
+                  </div>
+                  <div className="flex gap-2">
+                    <Button variant="outline" size="sm" className="text-destructive">Reject</Button>
+                    <Button size="sm">Approve</Button>
+                  </div>
                 </div>
-                <div className="flex gap-2">
-                  <Button size="sm" variant="outline">View Details</Button>
-                  <Button size="sm" variant="outline" className="text-destructive">Reject</Button>
-                  <Button size="sm">Approve</Button>
+                <div className="mt-3 pt-3 border-t">
+                  <p className="text-sm font-medium mb-2">Expected Participants:</p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="text-xs bg-secondary px-2 py-1 rounded">Rohan Kumar</span>
+                    <span className="text-xs bg-secondary px-2 py-1 rounded">Divya Rao</span>
+                    <span className="text-xs bg-secondary px-2 py-1 rounded">Priya Gupta</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -86,15 +107,15 @@ export const FacultyDashboard = () => {
             <div className="space-y-4">
               <div className="flex items-center justify-between p-4 border rounded-lg">
                 <div>
-                  <h3 className="font-semibold">Tech Symposium 2024</h3>
-                  <p className="text-sm text-muted-foreground">Computer Science Club • Feb 15, 2024</p>
+                  <h3 className="font-semibold">LNCT Carnival 2025</h3>
+                  <p className="text-sm text-muted-foreground">Dec 10, 2025 • Aryabhatt Auditorium</p>
                 </div>
                 <span className="text-sm text-success">Approved</span>
               </div>
               <div className="flex items-center justify-between p-4 border rounded-lg">
                 <div>
-                  <h3 className="font-semibold">Workshop on IoT</h3>
-                  <p className="text-sm text-muted-foreground">Electronics Club • Feb 28, 2024</p>
+                  <h3 className="font-semibold">LNCT Olympics</h3>
+                  <p className="text-sm text-muted-foreground">Dec 22, 2025 • LNCT Sports Complex</p>
                 </div>
                 <span className="text-sm text-success">Approved</span>
               </div>
