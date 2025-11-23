@@ -2,7 +2,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/context/AuthContext';
 import { useCollege, CollegeType } from '@/context/CollegeContext';
-import { Bell, User, LogOut, ChevronDown } from 'lucide-react';
+import { Bell, User, LogOut, ChevronDown, Home } from 'lucide-react';
+import lnctsLogo from '@/assets/lncts-logo.jpeg';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -44,9 +45,7 @@ export const Header = () => {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <button className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-                  <div className="flex h-8 w-8 items-center justify-center rounded bg-primary text-primary-foreground font-bold text-sm">
-                    LNCT
-                  </div>
+                  <img src={lnctsLogo} alt="LNCT Logo" className="h-10 w-10 rounded-full object-cover" />
                   <span className="text-xl font-bold text-foreground">LNCT Events</span>
                   <ChevronDown className="h-4 w-4 text-muted-foreground" />
                 </button>
@@ -77,6 +76,10 @@ export const Header = () => {
           </div>
 
           <nav className="hidden md:flex items-center gap-6">
+            <Link to="/" className="text-sm font-medium text-foreground hover:text-primary flex items-center gap-1">
+              <Home className="h-4 w-4" />
+              Home
+            </Link>
             <Link to="/events" className="text-sm font-medium text-foreground hover:text-primary">
               Events
             </Link>

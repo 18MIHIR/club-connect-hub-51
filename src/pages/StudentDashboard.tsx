@@ -63,15 +63,22 @@ export const StudentDashboard = () => {
             <div className="space-y-4">
               <div className="flex items-center justify-between p-4 border rounded-lg">
                 <div>
-                  <h3 className="font-semibold">Tech Symposium 2024</h3>
-                  <p className="text-sm text-muted-foreground">Feb 15, 2024 • Main Auditorium</p>
+                  <h3 className="font-semibold">LNCT Carnival 2025</h3>
+                  <p className="text-sm text-muted-foreground">Dec 10, 2025 • Aryabhatt Auditorium</p>
                 </div>
                 <Button variant="outline" size="sm">View Ticket</Button>
               </div>
               <div className="flex items-center justify-between p-4 border rounded-lg">
                 <div>
-                  <h3 className="font-semibold">Cultural Night</h3>
-                  <p className="text-sm text-muted-foreground">Feb 20, 2024 • Open Air Theatre</p>
+                  <h3 className="font-semibold">LnUniverse Tech Fest</h3>
+                  <p className="text-sm text-muted-foreground">Dec 18, 2025 • LNCTS S21 Seminar Hall</p>
+                </div>
+                <Button variant="outline" size="sm">View Ticket</Button>
+              </div>
+              <div className="flex items-center justify-between p-4 border rounded-lg">
+                <div>
+                  <h3 className="font-semibold">LNCT Olympics</h3>
+                  <p className="text-sm text-muted-foreground">Dec 22, 2025 • LNCT Sports Complex</p>
                 </div>
                 <Button variant="outline" size="sm">View Ticket</Button>
               </div>

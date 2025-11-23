@@ -56,29 +56,49 @@ export const AdminDashboard = () => {
         {/* Pending Approvals */}
         <Card className="mb-8">
           <CardHeader>
-            <CardTitle>Pending Approvals</CardTitle>
-            <CardDescription>Events and clubs awaiting your review</CardDescription>
+            <CardTitle>Events Pending Review</CardTitle>
+            <CardDescription>Events awaiting your approval</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
-              <div className="flex items-center justify-between p-4 border rounded-lg">
-                <div>
-                  <h3 className="font-semibold">Hackathon Spring 2024</h3>
-                  <p className="text-sm text-muted-foreground">by Computer Science Club</p>
+              <div className="border rounded-lg p-4">
+                <div className="flex items-center justify-between mb-3">
+                  <div>
+                    <h3 className="font-semibold">CodeFiesta LNCT</h3>
+                    <p className="text-sm text-muted-foreground">Dec 15, 2025 • by E-cell LNCTS</p>
+                  </div>
+                  <div className="flex gap-2">
+                    <Button size="sm" variant="outline" className="text-destructive">Reject</Button>
+                    <Button size="sm">Approve</Button>
+                  </div>
                 </div>
-                <div className="flex gap-2">
-                  <Button size="sm" variant="outline" className="text-destructive">Reject</Button>
-                  <Button size="sm">Approve</Button>
+                <div className="mt-3 pt-3 border-t">
+                  <p className="text-sm font-medium mb-2">Expected Participants:</p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="text-xs bg-secondary px-2 py-1 rounded">Karan Joshi</span>
+                    <span className="text-xs bg-secondary px-2 py-1 rounded">Neha Mishra</span>
+                    <span className="text-xs bg-secondary px-2 py-1 rounded">Amit Dubey</span>
+                  </div>
                 </div>
               </div>
-              <div className="flex items-center justify-between p-4 border rounded-lg">
-                <div>
-                  <h3 className="font-semibold">Photography Club</h3>
-                  <p className="text-sm text-muted-foreground">New club registration</p>
+              <div className="border rounded-lg p-4">
+                <div className="flex items-center justify-between mb-3">
+                  <div>
+                    <h3 className="font-semibold">LNCT Debate Championship</h3>
+                    <p className="text-sm text-muted-foreground">Dec 20, 2025 • by Debate Club</p>
+                  </div>
+                  <div className="flex gap-2">
+                    <Button size="sm" variant="outline" className="text-destructive">Reject</Button>
+                    <Button size="sm">Approve</Button>
+                  </div>
                 </div>
-                <div className="flex gap-2">
-                  <Button size="sm" variant="outline" className="text-destructive">Reject</Button>
-                  <Button size="sm">Approve</Button>
+                <div className="mt-3 pt-3 border-t">
+                  <p className="text-sm font-medium mb-2">Expected Participants:</p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="text-xs bg-secondary px-2 py-1 rounded">Rohan Kumar</span>
+                    <span className="text-xs bg-secondary px-2 py-1 rounded">Divya Rao</span>
+                    <span className="text-xs bg-secondary px-2 py-1 rounded">Sanjay Tiwari</span>
+                  </div>
                 </div>
               </div>
             </div>
