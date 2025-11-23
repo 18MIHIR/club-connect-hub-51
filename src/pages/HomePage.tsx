@@ -2,13 +2,18 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Calendar, Users, Trophy, Bell } from 'lucide-react';
+import lnctBuilding from '@/assets/lnct-building.jpeg';
 
 export const HomePage = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="bg-primary text-primary-foreground py-20">
-        <div className="container mx-auto px-4 text-center">
+      <section 
+        className="relative bg-primary text-primary-foreground py-20 bg-cover bg-center"
+        style={{ backgroundImage: `url(${lnctBuilding})` }}
+      >
+        <div className="absolute inset-0 bg-primary/70"></div>
+        <div className="container mx-auto px-4 text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             LNCT Group of Colleges
           </h1>

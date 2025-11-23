@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "@/context/AuthContext";
+import { CollegeProvider } from "@/context/CollegeContext";
 import { Header } from "@/components/layout/Header";
 import { ProtectedRoute } from "@/components/layout/ProtectedRoute";
 import { HomePage } from "@/pages/HomePage";
@@ -23,11 +24,12 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <AuthProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <Header />
-          <Routes>
+        <CollegeProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <Header />
+            <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
@@ -77,6 +79,7 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
+        </CollegeProvider>
       </AuthProvider>
     </TooltipProvider>
   </QueryClientProvider>
