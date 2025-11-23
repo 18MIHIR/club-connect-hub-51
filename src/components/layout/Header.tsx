@@ -1,7 +1,8 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/context/AuthContext';
-import { Bell, User, LogOut } from 'lucide-react';
+import { useCollege, CollegeType } from '@/context/CollegeContext';
+import { Bell, User, LogOut, ChevronDown } from 'lucide-react';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -13,6 +14,7 @@ import {
 
 export const Header = () => {
   const { user, logout, isAuthenticated } = useAuth();
+  const { selectedCollege, setSelectedCollege } = useCollege();
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -38,12 +40,41 @@ export const Header = () => {
     <header className="border-b bg-card">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
-          <Link to="/" className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded bg-primary text-primary-foreground font-bold text-sm">
-              LNCT
-            </div>
-            <span className="text-xl font-bold text-foreground">LNCT Events</span>
-          </Link>
+          <div className="flex items-center gap-2">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                  <div className="flex h-8 w-8 items-center justify-center rounded bg-primary text-primary-foreground font-bold text-sm">
+                    LNCT
+                  </div>
+                  <span className="text-xl font-bold text-foreground">LNCT Events</span>
+                  <ChevronDown className="h-4 w-4 text-muted-foreground" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start" className="w-48">
+                <DropdownMenuLabel>Select College</DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem 
+                  onClick={() => setSelectedCollege('LNCT Main')}
+                  className={selectedCollege === 'LNCT Main' ? 'bg-accent' : ''}
+                >
+                  LNCT Main
+                </DropdownMenuItem>
+                <DropdownMenuItem 
+                  onClick={() => setSelectedCollege('LNCT & S')}
+                  className={selectedCollege === 'LNCT & S' ? 'bg-accent' : ''}
+                >
+                  LNCT & S
+                </DropdownMenuItem>
+                <DropdownMenuItem 
+                  onClick={() => setSelectedCollege('LNCTE')}
+                  className={selectedCollege === 'LNCTE' ? 'bg-accent' : ''}
+                >
+                  LNCTE
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
 
           <nav className="hidden md:flex items-center gap-6">
             <Link to="/events" className="text-sm font-medium text-foreground hover:text-primary">

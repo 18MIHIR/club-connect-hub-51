@@ -1,10 +1,11 @@
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Users, Calendar, MessageCircle, Briefcase, Trophy, Camera, Mic } from 'lucide-react';
+import { Users, Calendar, MessageCircle, Briefcase, Trophy, Camera, Mic, Code } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useCollege } from '@/context/CollegeContext';
 
-const clubs = [
+const allClubs = [
   {
     id: 1,
     name: 'Orators Club',
@@ -12,9 +13,10 @@ const clubs = [
     description: 'Develop public speaking and communication skills through debates, speeches, and presentations.',
     members: 45,
     category: 'Cultural',
+    college: 'LNCT Main',
     upcomingEvents: [
-      { name: 'Public Speaking Workshop', date: '2024-12-05' },
-      { name: 'Inter-College Debate', date: '2024-12-12' }
+      { name: 'Public Speaking Workshop', date: '2025-12-05' },
+      { name: 'Inter-College Debate', date: '2025-12-12' }
     ]
   },
   {
@@ -24,9 +26,10 @@ const clubs = [
     description: 'Entrepreneurship Cell fostering innovation and startup culture among LNCT students.',
     members: 67,
     category: 'Technical',
+    college: 'LNCT & S',
     upcomingEvents: [
-      { name: 'Startup Pitch Competition', date: '2024-12-08' },
-      { name: 'Business Plan Workshop', date: '2024-12-15' }
+      { name: 'Startup Pitch Competition', date: '2025-12-08' },
+      { name: 'Business Plan Workshop', date: '2025-12-15' }
     ]
   },
   {
@@ -36,9 +39,10 @@ const clubs = [
     description: 'Promoting physical fitness and competitive sports across various disciplines.',
     members: 120,
     category: 'Sports',
+    college: 'LNCT Main',
     upcomingEvents: [
-      { name: 'Annual Sports Meet', date: '2024-12-10' },
-      { name: 'Basketball Tournament', date: '2024-12-18' }
+      { name: 'LNCT Olympics', date: '2025-12-08' },
+      { name: 'Basketball Tournament', date: '2025-12-18' }
     ]
   },
   {
@@ -48,9 +52,10 @@ const clubs = [
     description: 'Capturing moments and developing photography skills through workshops and photo walks.',
     members: 38,
     category: 'Cultural',
+    college: 'LNCT Main',
     upcomingEvents: [
-      { name: 'Campus Photo Walk', date: '2024-12-07' },
-      { name: 'Photography Exhibition', date: '2024-12-20' }
+      { name: 'Campus Photo Walk', date: '2025-12-07' },
+      { name: 'Photography Exhibition', date: '2025-12-20' }
     ]
   },
   {
@@ -60,21 +65,65 @@ const clubs = [
     description: 'Enhancing critical thinking and argumentation skills through structured debates.',
     members: 52,
     category: 'Cultural',
+    college: 'LNCT & S',
     upcomingEvents: [
-      { name: 'Parliamentary Debate', date: '2024-12-06' },
-      { name: 'MUN Conference', date: '2024-12-14' }
+      { name: 'Parliamentary Debate', date: '2025-12-06' },
+      { name: 'MUN Conference', date: '2025-12-14' }
+    ]
+  },
+  {
+    id: 6,
+    name: 'Coding Club',
+    icon: Code,
+    description: 'Building coding skills through workshops, competitions, and collaborative projects.',
+    members: 85,
+    category: 'Technical',
+    college: 'LNCT & S',
+    upcomingEvents: [
+      { name: 'CodeFiesta LNCT', date: '2025-12-12' },
+      { name: 'Web Development Workshop', date: '2025-12-16' }
+    ]
+  },
+  {
+    id: 7,
+    name: 'Robotics Club',
+    icon: Trophy,
+    description: 'Design, build, and program robots for competitions and innovation challenges.',
+    members: 42,
+    category: 'Technical',
+    college: 'LNCTE',
+    upcomingEvents: [
+      { name: 'Robo Wars Competition', date: '2025-12-19' },
+      { name: 'Arduino Workshop', date: '2025-12-22' }
+    ]
+  },
+  {
+    id: 8,
+    name: 'Music Club',
+    icon: Mic,
+    description: 'Explore various music genres through performances, jam sessions, and band formation.',
+    members: 63,
+    category: 'Cultural',
+    college: 'LNCTE',
+    upcomingEvents: [
+      { name: 'LNCT Talent Show', date: '2025-12-18' },
+      { name: 'Band Night', date: '2025-12-25' }
     ]
   }
 ];
 
 export const ClubsPage = () => {
+  const { selectedCollege } = useCollege();
+
+  const clubs = allClubs.filter(club => club.college === selectedCollege);
+
   return (
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-8">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold mb-2">LNCT Clubs</h1>
+          <h1 className="text-3xl font-bold mb-2">Clubs - {selectedCollege}</h1>
           <p className="text-muted-foreground">
-            Explore and join various clubs at LNCT Group of Colleges
+            Explore and join various clubs at {selectedCollege}
           </p>
         </div>
 
