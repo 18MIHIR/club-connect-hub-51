@@ -1,6 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { useAuth } from '@/hooks/useAuth';
+import { useAuth } from '@/context/AuthContext';
 import { useCollege, CollegeType } from '@/context/CollegeContext';
 import { Bell, User, LogOut, ChevronDown, Home } from 'lucide-react';
 import lnctsLogo from '@/assets/lncts-logo.jpeg';
@@ -14,19 +14,18 @@ import {
 } from '@/components/ui/dropdown-menu';
 
 export const Header = () => {
-  const { user, profile, signOut, isAuthenticated } = useAuth();
+  const { user, logout, isAuthenticated } = useAuth();
   const { selectedCollege, setSelectedCollege } = useCollege();
   const navigate = useNavigate();
 
-  const handleLogout = async () => {
-    await signOut();
+  const handleLogout = () => {
+    logout();
     navigate('/');
   };
 
   const getDashboardRoute = () => {
-    if (!profile) return '/';
-    const role = profile.roles?.[0];
-    switch (role) {
+    if (!user) return '/';
+    switch (user.role) {
       case 'admin':
         return '/admin/dashboard';
       case 'organizer':
@@ -109,7 +108,7 @@ export const Header = () => {
                   <DropdownMenuContent align="end" className="w-56">
                     <DropdownMenuLabel>
                       <div className="flex flex-col">
-                        <span>{profile?.name || user?.email}</span>
+                        <span>{user?.name}</span>
                         <span className="text-xs font-normal text-muted-foreground">{user?.email}</span>
                       </div>
                     </DropdownMenuLabel>
@@ -126,8 +125,11 @@ export const Header = () => {
               </>
             ) : (
               <>
+                <Button variant="ghost" asChild>
+                  <Link to="/login">Login</Link>
+                </Button>
                 <Button asChild>
-                  <Link to="/auth">Login / Register</Link>
+                  <Link to="/register">Register</Link>
                 </Button>
               </>
             )}
